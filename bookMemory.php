@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style type="text/css">
+  tr {
+width: 100%;
+display: inline-table;
+}
+
+table{
+ height:400px; 
+}
+tbody{
+  overflow-y: scroll;
+  height: 70%;
+  width: 90%;
+  position: absolute;
+
+}</style>
   <title>Book Memory</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +35,9 @@
      	<input type="submit" class="btn btn-info btn-sm" value="ค้นหา">
      </div>
 
-  <div class ="scroll">
-  <div class="container">
-  <table class="table table-hover">
+
+
+ <table class="table table-striped">
 
     <tbody> 
    
@@ -60,10 +76,8 @@ $conn->close();
 </div>
 
 </form>
-    
-    </tbody>
-  </table>
-
+</tbody>
+</table>
 </div>
 	
 </div>
