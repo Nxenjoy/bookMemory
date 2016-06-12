@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Add Book</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -27,8 +27,7 @@
      <label for="publisher">สำนักพิมพ์:</label>
     <input type="text" class="form-control" id="publisher" name = "publisher">
   </div> 
-  <button type="submit" class="btn btn-default"> เพิ่ม </button>
-   <button type="button" class="btn btn-default">ยกเลิก</button>
+  <button type="submit" class="btn btn-default" id="addDB"> เพิ่ม </button>
 
 </form>
 

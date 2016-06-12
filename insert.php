@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "book";
+ $servername = "128.199.86.22";
+ $username = "root";
+ $password = "meepooh";
+ $dbname = "bookMemory";
 
 
 $bookName = $_POST['name'];
@@ -31,4 +31,6 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
+ header( "location: http://128.199.86.22" );
+ exit(0);
 ?>
