@@ -18,16 +18,14 @@
      <div class="col-xs-2">
      	<input type="submit" class="btn btn-info btn-sm" value="ค้นหา">
      </div>
-      </div>
 
-</form>
-      <div class ="scroll">
+  <div class ="scroll">
   <div class="container">
   <table class="table table-hover">
 
-    <tbody>
-
-   <?php
+    <tbody> 
+   
+ <?php 
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -45,30 +43,32 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) { ?>
-      <tr>
-      <td > id: <?php . $row["bookID"]. ?> </div>
-            Name: <?php . $row["bookName"]. ?></div>
-              <div class="">"Authur: " . $row["bookAuthur"].</div>
-              <div class="">"Publisher: " . $row["bookPublisher"].</div>
-        </td>
-      </tr>
-
+ 
+    while($row = $result->fetch_assoc()) {
+      echo "<tr>";
+        echo "<td> id: " . $row["bookID"]. "    Name: " . $row["bookName"]. 
+        "<br>Authur: " . $row["bookAuthur"]. "    Publisher: " . $row["bookPublisher"]."</td>";
+     echo "</tr>";
+    }
+   
 } else {
     echo "0 results";
 }
 $conn->close();
-?>
+ ?>
+</div>
 
-
-
+</form>
+    
     </tbody>
   </table>
 
 </div>
 	
 </div>
-<form action="">
+
+
+<form action="add.php">
 <center> <input type="submit" class="btn btn-info" value="เพิ่มข้อมูล"></center>
 <form>
 
