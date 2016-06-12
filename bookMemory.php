@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Book Memory</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -33,6 +33,8 @@ $dbname = "book";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+$cs1 = "SET NAMES 'utf8' COLLATE 'utf8_general_ci'";
+  $conn->query($cs1);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -46,8 +48,7 @@ if ($result->num_rows > 0) {
  
     while($row = $result->fetch_assoc()) {
       echo "<tr>";
-        echo "<td> id: " . $row["bookID"]. "    Name: " . $row["bookName"]. 
-        "<br>Authur: " . $row["bookAuthur"]. "    Publisher: " . $row["bookPublisher"]."</td>";
+        echo "<td>Name: " . $row["bookName"]. "<br>Authur: " . $row["bookAuthur"]. "<br>Publisher: " . $row["bookPublisher"]."</td>";
      echo "</tr>";
     }
    
